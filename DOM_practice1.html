@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let counter = 0
+
+
+            const h1 = document.querySelector('h1')
+
+            const increase = document.querySelector('#increase')
+            const decrease = document.querySelector('#decrease')
+
+            increase.addEventListener('click', (event) => {
+                counter++
+                h1.textContent = `${counter}`
+            })
+            decrease.addEventListener('click', (event) => {
+                counter--
+                h1.textContent = `${counter}`
+            })
+
+        })
+    </script>
+</head>
+<body>
+<h1>0</h1>
+<button id="increase">+1</button>
+<button id="decrease">-1</button>
+</body>
+</html>
